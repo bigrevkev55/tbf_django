@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <table class="table table-bordered table-hover">
+    <thread>
+        <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Nicke Name</th>
+        </tr>
+    </thread>
+    <tbody>
+        {% for boxer in boxers %}
+        <tr>
+            <td>
+              <a href="{% url 'boxers:detail' boxer.id %}">{{boxer.last_name}}</a>
+              </td>
+            <td>{{boxer.first_name}}</td>
+            <td>{{boxer.nick_name}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+{% endblock  %}
+
