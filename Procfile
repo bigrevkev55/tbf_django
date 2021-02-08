@@ -1,1 +1,1 @@
-web: gunicorn tbf.wsgi
+web: gunicorn tbf.wsgi --log-file -
