@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qxo2w9x&cu!1)2=!)ybo&%!i5rzyz4zm=(%486f4rw)%ltqtm_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://thomasboxingfederationtbf.herokuapp.com/']
 
