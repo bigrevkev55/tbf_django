@@ -19,8 +19,8 @@ from . import views
 
 app_name = 'tbf'
 
-urlpatterns = [
-    path('', views.home name='home'),
+urlpatterns =
+    path('', views.home),
     path('admin/', admin.site.urls),
     path('boxers/', include('boxers.urls'))
 ]
