@@ -13,6 +13,7 @@
     <tbody>
         {% for boxer in boxers %}
         <tr>
+            <td>{{boxer.id}}</td>
             <td>
               <a href="{% url 'boxers:detail' boxer.id %}">{{boxer.last_name}}</a>
               </td>
