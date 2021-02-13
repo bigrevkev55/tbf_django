@@ -19,7 +19,7 @@ from . import views
 
 app_name = 'tbf'
 
-urlpatterns =
+urlpatterns = [
     path('', views.home),
     path('admin/', admin.site.urls),
     path('boxers/', include('boxers.urls'))
