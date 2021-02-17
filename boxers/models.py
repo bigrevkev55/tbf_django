@@ -17,7 +17,7 @@ class Boxer(models.Model):
     nick_name = models.CharField(max_length=255)
     #date_of_birth = models.DateField(null=True)
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
-    date_created = models.DateTimeField(default=timezone.now)
+    #date_created = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.last_name
