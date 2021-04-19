@@ -8,6 +8,8 @@ django = "==3.1.6"
 gunicorn = "*"
 django-heroku = "*"
 whitenoise = "*"
+django-crudbuilder = "*"
+django-tables2 = "*"
 
 [dev-packages]
 
