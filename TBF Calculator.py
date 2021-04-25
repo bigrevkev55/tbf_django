@@ -1,7 +1,5 @@
 
 
-
-
 fighters_fatigue_rating = int(input("Welcome to the Thomas Boxing Federation Fatigue Calculator! Enter the fighter's "
                                     "fatigue rating: "))
 rounds_in_the_fight = int(input("Now enter amount of rounds in the Fight: "))
