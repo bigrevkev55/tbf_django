@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
-from crudbuilder import urls
+
 
 app_name = 'tbf'
 
@@ -24,5 +24,4 @@ urlpatterns = [
     path('', views.home),
     path('admin/', admin.site.urls),
     path('boxers/', include('boxers.urls')),
-    path('crud/',  include(urls)),
 ]
