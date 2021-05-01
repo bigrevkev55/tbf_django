@@ -22,3 +22,17 @@ class Boxer(models.Model):
 
     def __str__(self):
         return self.last_name
+
+class Fights(models.model):
+    fight_id = models.AutoField()
+    fight_date = models.DateField()
+    red_boxer = models.ForeignKey(Boxer, on_delete=models.CASCADE)
+    blue_boxer = models.ForeignKey(Boxer, on_delete=models.CASCADE)
+    scheduled_rounds = models.CharField
+    result_round = models.IntegerField()
+    fight_result = models.CharField()
+    fight_winner = models.ForeignKey(Boxer, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.fight_id
+
