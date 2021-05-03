@@ -25,7 +25,6 @@ class Boxer(models.Model):
 
 
 class Fights(models.Model):
-    fight_id = models.AutoField()
     fight_date = models.DateField()
     red_boxer = models.ForeignKey(Boxer, on_delete=models.CASCADE)
     blue_boxer = models.ForeignKey(Boxer, on_delete=models.CASCADE)
