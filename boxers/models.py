@@ -23,7 +23,8 @@ class Boxer(models.Model):
     def __str__(self):
         return self.last_name
 
-class Fights(models.model):
+
+class Fights(models.Model):
     fight_id = models.AutoField()
     fight_date = models.DateField()
     red_boxer = models.ForeignKey(Boxer, on_delete=models.CASCADE)
@@ -35,4 +36,3 @@ class Fights(models.model):
 
     def __str__(self):
         return self.fight_id
-
