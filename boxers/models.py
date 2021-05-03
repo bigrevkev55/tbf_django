@@ -42,4 +42,4 @@ class Fights(models.Model):
 
 class Boxer_fights(models.Model):
     boxer = models.ForeignKey(Boxer, on_delete=models.CASCADE)
-    fight = models.ForeignKey(Fights, on_delete=CASCADE)
+    fight = models.ForeignKey(Fights, on_delete=models.CASCADE)
