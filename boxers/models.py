@@ -24,22 +24,29 @@ class Boxer(models.Model):
         return self.last_name
 
 
-class Fights(models.Model):
+class Fight(models.Model):
     fight_date = models.DateField()
     red_boxer = models.ManyToManyField(
-        Boxer, through='Boxer_fights')
+        through='.Boxer_fights',
+        through_fields=('red_boxer', 'fight'))
     blue_boxer = models.ManyToManyField(
-        Boxer, through='Boxer_fights')
+        through='.Boxer_fights',
+        through_fields=('blue_boxer', 'fight'))
     scheduled_rounds = models.CharField
     result_round = models.IntegerField()
-    fight_result = models.CharField()
+    fight_result = models.CharField(max_length=255)
     fight_winner = models.ManyToManyField(
-        Boxer, through='Boxer_fights')
+        through='.Boxer_fights',
+        through_fields=('boxer', 'fight'))
 
     def __str__(self):
-        return self.fight_id
+        return str(self.fight_id)
 
 
 class Boxer_fights(models.Model):
-    boxer = models.ForeignKey(Boxer, on_delete=models.CASCADE)
+    red_boxer = models.ForeignKey(Boxer, on_delete=models.CASCADE)
+    blue_boxer = models.ForeignKey(Boxer, on_delete=models.CASCADE)
     fight = models.ForeignKey(Fights, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(Boxer_fights.id)
