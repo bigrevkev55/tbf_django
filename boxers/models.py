@@ -46,7 +46,7 @@ class Fight(models.Model):
 class Boxer_fights(models.Model):
     red_boxer = models.ForeignKey(Boxer, on_delete=models.CASCADE)
     blue_boxer = models.ForeignKey(Boxer, on_delete=models.CASCADE)
-    fight = models.ForeignKey(Fights, on_delete=models.CASCADE)
+    fight = models.ForeignKey(Fight, on_delete=models.CASCADE)
 
     def __str__(self):
         return str(Boxer_fights.id)

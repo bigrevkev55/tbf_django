@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Genre, Boxer, Fights, Boxer_fights
+from .models import Genre, Boxer, Fight, Boxer_fights
 
 
 class GenreAdmin(admin.ModelAdmin):
@@ -22,5 +22,5 @@ class Boxer_fightsAdmin(admin.ModelAdmin):
 # Register your models here.
 admin.site.register(Genre, GenreAdmin)
 admin.site.register(Boxer, BoxerAdmin)
-admin.site.register(Fights, FightsAdmin)
+admin.site.register(Fight, FightsAdmin)
 admin.site.register(Boxer_fights, Boxer_fightsAdmin)
